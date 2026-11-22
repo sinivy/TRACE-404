@@ -1,6 +1,8 @@
 # `TRACE//404`
 ### TERMINAL DE INVESTIGAÇÃO // CASO 001
 
+https://sinivy.github.io/TRACE-404/
+
 ```text
  ████████╗██████╗  █████╗  ██████╗███████╗
     ██╔══╝██╔══██╗██╔══██╗██╔════╝██╔════╝
