@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+    --fundo: #050805;
+    --verde: #72e879;
+    --verde-fraco: #477d4b;
+    --verde-escuro: #28452b;
+    --texto: #9ccea0;
+    --alerta: #ff6666;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--fundo);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: var(--fundo);
+    color: var(--verde);
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+}
+
+/* TERMINAL */
+
+.terminal {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 24px;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--verde-escuro);
+}
+
+.cabecalho h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.cabecalho h1 span {
+    color: var(--texto);
+}
+
+.cabecalho p {
+    margin: 4px 0 0;
+    font-size: 18px;
+    color: var(--verde-fraco);
+}
+
+/* ÁREA DE TERMINAL */
+
+.tela-terminal {
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+}
+
+#historico {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mensagem {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    line-height: 1.15;
+    font-size: 22px;
+}
+
+.mensagem.sistema {
+    color: var(--texto);
+}
+
+.mensagem.sucesso {
+    color: var(--verde);
+}
+
+.mensagem.alerta {
+    color: var(--alerta);
+}
+
+.mensagem.comando {
+    color: #c1e8c3;
+}
+
+/* LINHA DE DIGITAÇÃO */
+
+.linha-comando {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.prefixo {
+    color: var(--verde);
+    white-space: nowrap;
+}
+
+#campo-comando {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    color: #d0f5d0;
+    font-family: inherit;
+    font-size: 22px;
+    caret-color: var(--verde);
+}
+
+/* CURSOR */
+
+#campo-comando:focus {
+    outline: none;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    padding-top: 10px;
+    border-top: 1px solid var(--verde-escuro);
+    color: var(--verde-fraco);
+    font-size: 16px;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 19px;
+    }
+
+    .terminal {
+        padding: 12px;
+    }
+
+    .cabecalho {
+        margin-bottom: 12px;
+        padding-bottom: 10px;
+    }
+
+    .cabecalho h1 {
+        font-size: 26px;
+    }
+
+    .cabecalho p {
+        font-size: 15px;
+    }
+
+    .mensagem {
+        font-size: 19px;
+        line-height: 1.25;
+    }
+
+    .prefixo {
+        font-size: 17px;
+    }
+
+    #campo-comando {
+        font-size: 16px;
+    }
+
+    .rodape {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+}
